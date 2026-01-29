@@ -1,0 +1,467 @@
+[
+  {
+    "id": "69",
+    "name": "Batman",
+    "powerstats": {
+      "intelligence": "81",
+      "strength": "40",
+      "speed": "29",
+      "durability": "55",
+      "power": "63",
+      "combat": "90"
+    },
+    "biography": {
+      "full-name": "Terry McGinnis",
+      "alter-egos": "No alter egos found.",
+      "aliases": [
+        "Batman II",
+        "The Tomorrow Knight",
+        "The second Dark Knight",
+        "The Dark Knight of Tomorrow",
+        "Batman Beyond"
+      ],
+      "place-of-birth": "Gotham City, 25th Century",
+      "first-appearance": "Batman Beyond #1",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": [
+        "5'10",
+        "178 cm"
+      ],
+      "weight": [
+        "170 lb",
+        "77 kg"
+      ],
+      "eye-color": "Blue",
+      "hair-color": "Black"
+    },
+    "work": {
+      "occupation": "-",
+      "base": "21st Century Gotham City"
+    },
+    "connections": {
+      "group-affiliation": "Batman Family, Justice League Unlimited",
+      "relatives": "Bruce Wayne (biological father), Warren McGinnis (father, deceased), Mary McGinnis (mother), Matt McGinnis (brother)"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg"
+    }
+  },
+  {
+    "id": "644",
+    "name": "Superman",
+    "powerstats": {
+      "intelligence": "94",
+      "strength": "100",
+      "speed": "100",
+      "durability": "100",
+      "power": "100",
+      "combat": "85"
+    },
+    "biography": {
+      "full-name": "Clark Kent",
+      "alter-egos": "Superman Prime One-Million",
+      "aliases": [
+        "Clark Joseph Kent",
+        "The Man of Steel",
+        "the Man of Tomorrow",
+        "the Last Son of Krypton",
+        "Big Blue",
+        "the Metropolis Marvel",
+        "the Action Ace"
+      ],
+      "place-of-birth": "Krypton",
+      "first-appearance": "ACTION COMICS #1",
+      "publisher": "Superman Prime One-Million",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Kryptonian",
+      "height": [
+        "6'3",
+        "191 cm"
+      ],
+      "weight": [
+        "225 lb",
+        "101 kg"
+      ],
+      "eye-color": "Blue",
+      "hair-color": "Black"
+    },
+    "work": {
+      "occupation": "Reporter for the Daily Planet and novelist",
+      "base": "Metropolis"
+    },
+    "connections": {
+      "group-affiliation": "Justice League of America, The Legion of Super-Heroes (pre-Crisis as Superboy); Justice Society of America (pre-Crisis Earth-2 version); All-Star Squadron (pre-Crisis Earth-2 version)",
+      "relatives": "Lois Lane (wife), Jor-El (father, deceased), Lara (mother, deceased), Jonathan Kent (adoptive father), Martha Kent (adoptive mother), Seyg-El (paternal grandfather, deceased), Zor-El (uncle, deceased), Alura (aunt, deceased), Supergirl (Kara Zor-El, cousin), Superboy (Kon-El/Conner Kent, partial clone)"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
+    }
+  },
+  {
+    "id": "620",
+    "name": "Spider-Man",
+    "powerstats": {
+      "intelligence": "90",
+      "strength": "55",
+      "speed": "67",
+      "durability": "75",
+      "power": "74",
+      "combat": "85"
+    },
+    "biography": {
+      "full-name": "Peter Parker",
+      "alter-egos": "No alter egos found.",
+      "aliases": [
+        "Spiderman",
+        "Bag-Man",
+        "Black Marvel",
+        "Captain Universe",
+        "Dusk",
+        "Green Hood",
+        "Hornet",
+        "Mad Dog 336",
+        "Peter Palmer",
+        "Prodigy",
+        "Ricochet",
+        "Scarlet Spider",
+        "Spider-Boy",
+        "Spider-Hulk",
+        "Spider-Morphosis"
+      ],
+      "place-of-birth": "New York, New York",
+      "first-appearance": "Amazing Fantasy #15",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": [
+        "5'10",
+        "178 cm"
+      ],
+      "weight": [
+        "165 lb",
+        "74 kg"
+      ],
+      "eye-color": "Hazel",
+      "hair-color": "Brown"
+    },
+    "work": {
+      "occupation": "Freelance photographer, teacher",
+      "base": "New York, New York"
+    },
+    "connections": {
+      "group-affiliation": "Member of the Avengers, formerly member of Outlaws, alternate Fantastic Four",
+      "relatives": "Richard Parker (father, deceased), Mary Parker(mother, deceased), Benjamin Parker (uncle, deceased), May Parker (aunt), Mary Jane Watson-Parker (wife), May Parker (daughter, allegedly deceased)"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/133.jpg"
+    }
+  },
+  {
+    "id": "263",
+    "name": "Flash",
+    "powerstats": {
+      "intelligence": "63",
+      "strength": "10",
+      "speed": "100",
+      "durability": "50",
+      "power": "68",
+      "combat": "32"
+    },
+    "biography": {
+      "full-name": "Jay Garrick",
+      "alter-egos": "No alter egos found.",
+      "aliases": [
+        "Jay Garrick",
+        "Siegfreid the Speedster"
+      ],
+      "place-of-birth": "Hibbardsville, Kansas",
+      "first-appearance": "Flash Comics #1 (January 1940)",
+      "publisher": "DC Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": [
+        "5'11",
+        "180 cm"
+      ],
+      "weight": [
+        "179 lb",
+        "81 kg"
+      ],
+      "eye-color": "Blue",
+      "hair-color": "Brown / White"
+    },
+    "work": {
+      "occupation": "Research Scientist, part-time Director of Garrick Laboratories",
+      "base": "Keystone City, Kansas"
+    },
+    "connections": {
+      "group-affiliation": "Justice Society of America, Flash Family; formerly All-Star Squadron",
+      "relatives": "Joseph Garrick (father), Joan Williams (wife), Arthur Williams (father-in-law), unnamed adopted son (deceased), Bart Allen (Flash II, ward)"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/891.jpg"
+    }
+  },
+  {
+    "id": "732",
+    "name": "Ironman",
+    "powerstats": {
+      "intelligence": "100",
+      "strength": "85",
+      "speed": "58",
+      "durability": "85",
+      "power": "100",
+      "combat": "64"
+    },
+    "biography": {
+      "full-name": "Tony Stark",
+      "alter-egos": "No alter egos found.",
+      "aliases": [
+        "Iron Knight",
+        "Hogan Potts",
+        "Spare Parts Man",
+        "Cobalt Man II",
+        "Crimson Dynamo",
+        "Ironman"
+      ],
+      "place-of-birth": "Long Island, New York",
+      "first-appearance": "Tales of Suspence #39 (March, 1963)",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": [
+        "6'6",
+        "198 cm"
+      ],
+      "weight": [
+        "425 lb",
+        "191 kg"
+      ],
+      "eye-color": "Blue",
+      "hair-color": "Black"
+    },
+    "work": {
+      "occupation": "Inventor, Industrialist; former United States Secretary of Defense",
+      "base": "Seattle, Washington"
+    },
+    "connections": {
+      "group-affiliation": "Avengers, Illuminati, Stark Resilient; formerly S.H.I.E.L.D., leader of Stark Enterprises, the Pro-Registration Superhero Unit, New Avengers, Mighty Avengers, Hellfire Club, Force Works, Avengers West Coast, United States Department of Defense.",
+      "relatives": "Howard Anthony Stark (father, deceased), Maria Stark (mother, deceased), Morgan Stark (cousin), Isaac Stark (ancestor)"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
+    }
+  },
+  {
+    "id": "418",
+    "name": "Luke Skywalker",
+    "powerstats": {
+      "intelligence": "69",
+      "strength": "38",
+      "speed": "42",
+      "durability": "25",
+      "power": "100",
+      "combat": "100"
+    },
+    "biography": {
+      "full-name": "Luke Skywalker",
+      "alter-egos": "No alter egos found.",
+      "aliases": [
+        "General Skywalker",
+        "Master Luke",
+        "Jedi"
+      ],
+      "place-of-birth": "Tatooine",
+      "first-appearance": "Star Wars: Episode IV - A New Hope (1977)",
+      "publisher": "George Lucas",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": [
+        "5'6",
+        "168 cm"
+      ],
+      "weight": [
+        "170 lb",
+        "77 kg"
+      ],
+      "eye-color": "Blue",
+      "hair-color": "Blond"
+    },
+    "work": {
+      "occupation": "-",
+      "base": "-"
+    },
+    "connections": {
+      "group-affiliation": "Alliance to Restore the Republic, Jedi Order, Alliance of Free Planets, Bright Tree Village, New Republic, New Jedi Order",
+      "relatives": "Darth Vader (father), Princes Leia (Sister), Yoda (Master), Obi-Wan Kenobi (Master)"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/10447.jpg"
+    }
+  },
+  {
+    "id": "729",
+    "name": "Yoda",
+    "powerstats": {
+      "intelligence": "88",
+      "strength": "52",
+      "speed": "33",
+      "durability": "25",
+      "power": "100",
+      "combat": "90"
+    },
+    "biography": {
+      "full-name": "Yoda",
+      "alter-egos": "No alter egos found.",
+      "aliases": [
+        "-"
+      ],
+      "place-of-birth": "-",
+      "first-appearance": "Star Wars: Episode V - The Empire Strikes Back (1980)",
+      "publisher": "George Lucas",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Yoda's species",
+      "height": [
+        "2'2",
+        "66 cm"
+      ],
+      "weight": [
+        "38 lb",
+        "17 kg"
+      ],
+      "eye-color": "Brown",
+      "hair-color": "White"
+    },
+    "work": {
+      "occupation": "-",
+      "base": "-"
+    },
+    "connections": {
+      "group-affiliation": "Jedi Order, Jedi High Counsl, Galactic Republic",
+      "relatives": "Master: N'Kata Del Gormo, Apprentices: Dooku, Cin Drallig, Ikrit, Rahm Kota, Ki-Adi-Mundi, Oppo Rancisis, Luke Skywalker"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/10454.jpg"
+    }
+  },
+  {
+    "id": "398",
+    "name": "Kylo Ren",
+    "powerstats": {
+      "intelligence": "56",
+      "strength": "44",
+      "speed": "33",
+      "durability": "30",
+      "power": "100",
+      "combat": "70"
+    },
+    "biography": {
+      "full-name": "Ben Solo",
+      "alter-egos": "No alter egos found.",
+      "aliases": [
+        "-"
+      ],
+      "place-of-birth": "-",
+      "first-appearance": "Star Wars: Episode VII - The Force Awakens (2015)",
+      "publisher": "George Lucas",
+      "alignment": "bad"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "Human",
+      "height": [
+        "-",
+        "0 cm"
+      ],
+      "weight": [
+        "- lb",
+        "0 kg"
+      ],
+      "eye-color": "-",
+      "hair-color": "-"
+    },
+    "work": {
+      "occupation": "-",
+      "base": "-"
+    },
+    "connections": {
+      "group-affiliation": "-",
+      "relatives": "Han Solo (Father), Princess Leia (Mother), Luke Skywalker (Uncle)"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/10559.jpg"
+    }
+  },
+  {
+    "id": "719",
+    "name": "Wonder Man",
+    "powerstats": {
+      "intelligence": "75",
+      "strength": "100",
+      "speed": "53",
+      "durability": "90",
+      "power": "64",
+      "combat": "64"
+    },
+    "biography": {
+      "full-name": "Simon Williams",
+      "alter-egos": "No alter egos found.",
+      "aliases": [
+        "Wondie",
+        "JQ-272712-K"
+      ],
+      "place-of-birth": "Paterson, New Jersey",
+      "first-appearance": "AVENGERS #9",
+      "publisher": "Marvel Comics",
+      "alignment": "good"
+    },
+    "appearance": {
+      "gender": "Male",
+      "race": "null",
+      "height": [
+        "6'2",
+        "188 cm"
+      ],
+      "weight": [
+        "380 lb",
+        "171 kg"
+      ],
+      "eye-color": "Red",
+      "hair-color": "Black"
+    },
+    "work": {
+      "occupation": "Former industrialist, now stuntman, actor, adventurer",
+      "base": "Mobile"
+    },
+    "connections": {
+      "group-affiliation": "Former ally of the original Masters of Evil, former member of the East Coast Avengers, current member of the West Coast Avengers",
+      "relatives": "Sanford (father, deceased) Martha (mother), Eric (alias the Grim Reaper, brother, deceased), Vision II ('brother')"
+    },
+    "image": {
+      "url": "https://www.superherodb.com/pictures2/portraits/10/100/162.jpg"
+    }
+  }
+]
