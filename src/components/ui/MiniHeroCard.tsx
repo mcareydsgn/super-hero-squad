@@ -1,7 +1,7 @@
 const prerender = false;
 import React from "react";
 import type { Hero, PowerStats} from '../../HeroTypes.ts'
-import {$totalOnDuty, $maxHeroesOnDuty, $toggleHeroDutyStatus} from '../../HeroesStore.ts'
+import {$toggleHeroDutyStatus} from'../../HeroesStore.ts'
 
 interface Props {
     hero:  Hero,
@@ -39,23 +39,23 @@ function HeroPowerStats({...rest}: PowerStats) {
 function HeroCard({hero, showBioLinks = false, buttonText} : Props ) {
 
     const handleHeroCardAction = (id :string, onDuty:boolean) => {
-        if ($totalOnDuty.get() < $maxHeroesOnDuty.get()) {
-            $toggleHeroDutyStatus(id, onDuty);
-        }
+        $toggleHeroDutyStatus(id, onDuty);
     }
 
     return (
         <>
-            <article className="hero-card">
-                <div>
-                    <img src={hero.imageSource} alt=""/>
-                </div>
-                <div className="hero-card-content">
-                    <h3>{hero.name}</h3>
-                    {hero.powerstats && (<HeroPowerStats {...hero.powerstats} />)}
-                    <button type={"button"} onClick={() => handleHeroCardAction(hero.id, hero.onDuty)}>{buttonText}</button>
-                    <a href={`/hero-bio/${hero.id}`}>Read Full Bio</a>
-                </div>
+            <article className="mini-hero-card">
+                <details name={"mini-hero-card"}>
+                    <summary>
+                        <span>{hero.name}  </span>
+                        <img src={hero.imageSource} alt=""/>
+                    </summary>
+                    <div className="hero-card-content">
+                        {hero.powerstats && (<HeroPowerStats {...hero.powerstats} />)}
+                    </div>
+                </details>
+                <button type={"button"} onClick={() => handleHeroCardAction(hero.id, hero.onDuty)}>{buttonText}</button>
+
             </article>
         </>
     );

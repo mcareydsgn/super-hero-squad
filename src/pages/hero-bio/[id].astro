@@ -1,0 +1,22 @@
+---
+export const prerender = false;
+import Layout from '../../layouts/Layout.astro';
+
+import {GET} from '../api/hero-bio.ts'
+
+let response = await GET(Astro)
+const data = await response.json()
+
+---
+<Layout>
+    <header>
+        <hgroup>
+            <h1>Hero Name</h1>
+            <h2>Assemble your team and take on multiple crises across the universe.</h2>
+            {data.name}
+        </hgroup>
+    </header>
+    <main>
+
+    </main>
+</Layout>

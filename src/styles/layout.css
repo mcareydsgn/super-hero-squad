@@ -1,0 +1,11 @@
+@import "../components/ui/HeroCard.css";
+
+:where(h1,h2,h3,h4,h5,h6, p){
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    gap: 1rem;
+}

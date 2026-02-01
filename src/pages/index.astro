@@ -1,9 +1,14 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
+import HeroRecruits from "../components/ui/HeroRecruits";
+import HeroSquad from '../components/ui/HeroSquad';
+import Missions from '../components/ui/Missions';
 
+import {$allHeroes} from "../HeroesStore";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
 ---
 
 <Layout>
@@ -14,12 +19,53 @@ import Layout from '../layouts/Layout.astro';
         </hgroup>
     </header>
     <main>
-        <section>
+        <section class="squad">
             <header>
-                <h3>Squad</h3>
+                <h3>Your Team</h3>
             </header>
-
+            <div class="hero-container" >
+                <HeroSquad client:load></HeroSquad>
+            </div>
         </section>
-
+        <div class="mission-control">
+            <section>
+                <header>
+                    <h3>Mission Brief</h3>
+                </header>
+                <Missions client:load></Missions>
+            </section>
+            <section>
+                <header>
+                    <h3>Hero Recruits</h3>
+                </header>
+                <div class="grid">
+                    <HeroRecruits client:load></HeroRecruits>
+                </div>
+            </section>
+        </div>
     </main>
 </Layout>
+<style>
+
+    header {
+        text-align: center;
+    }
+    main{
+        display: flex;
+        gap: 3rem;
+        max-width: 2000px;
+        margin-inline:auto;
+    }
+
+
+    .hero-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .mission-control {
+        flex: 1;
+    }
+
+</style>

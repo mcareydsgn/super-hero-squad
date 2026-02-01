@@ -1,0 +1,82 @@
+
+.hero-card {
+    background-color: navy;
+    color: white;
+    height: 100%;
+    & > div {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    & > div:has(img) {
+        overflow: hidden;
+        padding: 0;
+        flex-basis: 50%;
+    }
+
+    & img {
+        aspect-ratio: 2 / 3;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    & .power-stats {
+
+            list-style: none;
+            gap: 1rem;
+            display: flex;
+            padding-left: 0;
+            flex-wrap: wrap;
+
+            & li {
+                display: flex;
+                flex-direction: column;
+                padding-left: 0;
+            }
+    }
+}
+
+
+.mini-hero-card {
+    position: relative;
+    width: 100px;
+   & details  {
+       display: flex;
+       position: relative;
+   }
+
+    & summary {
+        overflow: hidden;
+        list-style: none;
+        position: relative;
+        & span {
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    & img {
+        aspect-ratio: 1 / 3;
+        object-fit: cover;
+        object-position: top center;
+        width: 100%;
+    }
+
+    .hero-card-content {
+        position: absolute;
+    }
+
+    button {
+        bottom:0;
+        position: absolute;
+    }
+
+
+}
+
+.mini-hero-slot {
+    aspect-ratio: 1 / 3;
+    background-color: navy;
+    width: 100px;
+}

@@ -1,0 +1,270 @@
+[
+
+    {
+      "title": "Hell's Kitchen Under Siege",
+      "mission": "A new gang, the 'Black Serpents,' takes control of Hell's Kitchen, using high-tech weapons and supernatural abilities to terrorize the neighborhood. Daredevil, Luke Cage, and Iron Fist are missing. Put together a team an alliance to take down the gang before they spread their influence across the city.",
+      "mission_stats": {
+        "intelligence": 210,
+        "strength": 240,
+        "speed": 180,
+        "durability": 225,
+        "power": 195,
+        "combat": 255
+      },
+      "required_heroes": 3,
+      "complete": false
+    },
+    {
+      "title": "Gotham's Shadows",
+      "mission": "Gotham’s criminals are feeling bolder than ever, and a new villain called 'The Phantom' emerges, orchestrating high-profile crimes. Your team must restore order in the city while dealing with their own conflicting approaches to justice.",
+      "mission_stats": {
+        "intelligence": 240,
+        "strength": 210,
+        "speed": 195,
+        "durability": 210,
+        "power": 180,
+        "combat": 270
+      },
+      "required_heroes": 3,
+      "complete": false
+    },
+    {
+      "title": "The War on the Streets",
+      "mission": "The Punisher is waging a one-man war on crime in New York. Your team must intervene before Frank Castle's war results in the death of innocents. They must stop the Silver Hand syndicate and prevent Frank’s brutal methods from tearing the city apart.",
+      "mission_stats": {
+        "intelligence": 225,
+        "strength": 255,
+        "speed": 210,
+        "durability": 240,
+        "power": 225,
+        "combat": 270
+      },
+      "required_heroes": 3,
+      "complete": false
+    },
+    {
+      "title": "Outsiders: Rise of the Dark Web",
+      "mission": "The Outsiders must face off against a cyberterrorist group called 'The Dark Web,' who are manipulating Gotham’s underworld through advanced technology. Your team must work together to expose the mastermind behind these attacks.",
+      "mission_stats": {
+        "intelligence": 270,
+        "strength": 210,
+        "speed": 195,
+        "durability": 210,
+        "power": 240,
+        "combat": 225
+      },
+      "required_heroes": 3,
+      "complete": false
+    },
+    {
+      "title": "Street Fight",
+      "mission": "A street fighting tournament organized by the Red Circle invites heroes and villains to compete. Your team must navigate the brutal competition and uncover the dark purpose behind the tournament.",
+      "mission_stats": {
+        "intelligence": 210,
+        "strength": 270,
+        "speed": 225,
+        "durability": 240,
+        "power": 180,
+        "combat": 285
+      },
+      "required_heroes": 3,
+      "complete": false
+    },
+    {
+      "title": "The Devil’s Advocate",
+      "mission": "Matt Murdock is struggling between his roles as lawyer and vigilante. When a powerful crime boss is acquitted through legal loopholes, Daredevil must confront the line between law and justice with his closest friends, Foggy Nelson and Karen Page.",
+      "mission_stats": {
+        "intelligence": 285,
+        "strength": 180,
+        "speed": 195,
+        "durability": 210,
+        "power": 150,
+        "combat": 255
+      },
+      "required_heroes": 3,
+      "complete": false
+    },
+    {
+      "title": "Fear Within",
+      "mission": "A new villain uses fear-inducing technology to cause chaos in Gotham. Your team must work together to track down the source of the terror and face their own personal fears in the process.",
+      "mission_stats": {
+        "intelligence": 170,
+        "strength": 130,
+        "speed": 140,
+        "durability": 150,
+        "power": 120,
+        "combat": 160
+      },
+      "required_heroes": 2,
+      "complete": false
+    },
+    {
+      "title": "Ghost of Chinatown",
+      "mission": "A mysterious new vigilante, 'The Ghost,' has started targeting Chinese organized crime in New York's Chinatown. Daredevil must investigate, but he soon learns that the vigilante’s goals are not so clear-cut, and the city may suffer collateral damage.",
+      "mission_stats": {
+        "intelligence": 240,
+        "strength": 210,
+        "speed": 225,
+        "durability": 240,
+        "power": 195,
+        "combat": 255
+      },
+      "required_heroes": 3,
+      "complete": false
+    },
+    {
+      "title": "The Streets of Metropolis",
+      "mission": "While Superman deals with cosmic threats, Metropolis’ streets are left vulnerable to crime. Green Lantern John Stewart teams up with The Question and The Vigilante to take down a new gang using alien technology to wreak havoc.",
+      "mission_stats": {
+        "intelligence": 270,
+        "strength": 240,
+        "speed": 210,
+        "durability": 240,
+        "power": 255,
+        "combat": 225
+      },
+      "required_heroes": 3,
+      "complete": false
+    },
+    {
+      "title": "The Invasion of the Dark Order",
+      "mission": "A powerful cosmic entity, the Dark Order, emerges from the depths of space with an army of twisted beings bent on conquering the galaxy. The Avengers, Guardians of the Galaxy, and cosmic heroes must stand together to prevent universal extinction.",
+      "mission_stats": {
+        "intelligence": 630,
+        "strength": 595,
+        "speed": 560,
+        "durability": 630,
+        "power": 665,
+        "combat": 595
+      },
+      "required_heroes": 7,
+      "complete": false
+    },
+    {
+      "title": "Infinity War: The Snap Reversed",
+      "mission": "Thanos is back, wielding the full power of the Infinity Stones. His goal: to wipe out half the universe once again. The Avengers, Guardians of the Galaxy, and cosmic heroes like Captain Marvel must unite to stop him and undo the devastating consequences of the Snap.",
+      "mission_stats": {
+        "intelligence": 570,
+        "strength": 600,
+        "speed": 540,
+        "durability": 600,
+        "power": 600,
+        "combat": 570
+      },
+      "required_heroes": 6,
+      "complete": false
+    },
+    {
+      "title": "Darkseid's Ascension",
+      "mission": "Darkseid has finally found the Anti-Life Equation and plans to use it to bend the entire universe to his will. The Justice League, along with allies like Green Lanterns and the New Gods, must stop Darkseid from rewriting reality itself.",
+      "mission_stats": {
+        "intelligence": 630,
+        "strength": 665,
+        "speed": 595,
+        "durability": 665,
+        "power": 700,
+        "combat": 630
+      },
+      "required_heroes": 7,
+      "complete": false
+    },
+
+  {
+    "title": "The Phoenix's Wrath",
+    "mission": "Jean Grey, as the Phoenix, is losing control of the immense power coursing through her. As the Phoenix Force threatens to consume her and the universe, the X-Men must confront their friend and stop the cosmic entity from burning everything to ash.",
+    "mission_stats": {
+      "intelligence": "85",
+      "strength": "90",
+      "speed": "75",
+      "durability": "85",
+      "power": "100",
+      "combat": "90"
+    },
+    "required_heroes": 5,
+    "complete": false
+  },
+  {
+    "title": "The Galactic Empire's Return",
+    "mission": "A new threat emerges in the form of an Imperial remnant, led by a dark Force-sensitive leader determined to reclaim the galaxy. The New Republic, along with old and new Jedi, must unite to stop this rise of darkness from threatening the balance of the Force.",
+    "mission_stats": {
+      "intelligence": "90",
+      "strength": "75",
+      "speed": "85",
+      "durability": "80",
+      "power": "85",
+      "combat": "90"
+    },
+    "required_heroes": 4,
+    "complete": false
+  },
+  {
+    "title": "The Crisis of Infinite Earths",
+    "mission": "The Anti-Monitor has begun his final assault on the Multiverse, erasing entire worlds from existence. Heroes from every dimension, including the Justice League, the Titans, and even the Flash's team, must unite to stop him and save the Multiverse from collapse.",
+    "mission_stats": {
+      "intelligence": "90",
+      "strength": "85",
+      "speed": "90",
+      "durability": "85",
+      "power": "95",
+      "combat": "90"
+    },
+    "required_heroes": 10,
+    "complete": false
+  },
+  {
+    "title": "Reign of the White Lanterns",
+    "mission": "A new, unprecedented power emerges in the form of the White Lanterns, wielding the power of life itself. While their goal is to bring about universal peace, their methods are destabilizing the galaxy. The Green Lantern Corps, Justice League, and other cosmic heroes must confront this new force before it reshapes the universe.",
+    "mission_stats": {
+      "intelligence": 325,
+      "strength": 438,
+      "speed": 405,
+      "durability": 485,
+      "power":  517,
+      "combat": 547
+    },
+    "required_heroes": 5,
+    "complete": false
+  },
+  {
+    "title": "The Sith Eternal",
+    "mission": "A secret order of Sith, led by a resurrected Darth Sidious, has begun preparing for galactic conquest. With the rise of Sith Eternal, your team must confront this new threat and stop the Sith from taking over the galaxy again.",
+    "mission_stats": {
+      "intelligence": 348,
+      "strength": 421,
+      "speed": 198,
+      "durability": 240,
+      "power": 301,
+      "combat": 387
+    },
+    "required_heroes": 5,
+    "complete": false
+  },
+  {
+    "title": "The Annihilation Wave",
+    "mission": "The universe is threatened by the Annihilation Wave, led by Annihilus, as it sweeps through galaxies, leaving nothing but destruction in its wake. Heroes from across the HeroVerse, must team up to stop the wave before it consumes everything.",
+    "mission_stats": {
+      "intelligence": 325,
+      "strength": 438,
+      "speed": 405,
+      "durability": 485,
+      "power":  517,
+      "combat": 547
+    },
+    "required_heroes": 6,
+    "complete": false
+  },
+  {
+    "title": "The Invasion of the Dark Order",
+    "mission": "A powerful cosmic entity, the Dark Order, emerges from the depths of space with an army of twisted beings bent on conquering the galaxy. Cosmic heroes must stand together to prevent universal extinction.",
+    "mission_stats": {
+      "intelligence": 360,
+      "strength": 320,
+      "speed": 160,
+      "durability": 540,
+      "power": 570,
+      "combat": 340
+    },
+    "required_heroes": 7,
+    "complete": false
+  }
+]

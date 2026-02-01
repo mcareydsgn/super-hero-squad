@@ -1,13 +1,12 @@
-export const prerender = false;
+import type { APIRoute } from 'astro'
 import { getSecret } from 'astro:env/server';
-import type {APIRoute} from "astro";
 
 export const GET : APIRoute = async ({ params  }) => {
-    const {name} = params;
+    const {id} = params;
 
     try {
 
-        const response = await fetch(`https://superheroapi.com/api/${getSecret('API_KEY')}/search/${name}`, {
+        const response = await fetch(`https://superheroapi.com/api/${getSecret('API_KEY')}/${id}`, {
         });
 
         const data = await response.json();
@@ -19,5 +18,4 @@ export const GET : APIRoute = async ({ params  }) => {
     } catch (e) {
         return new Response(JSON.stringify({ error: "Internal Server Error" }), { status: 500 });
     }
-
 };
