@@ -13,8 +13,6 @@ const JSONHeroes : Hero[] =   StartHeroesJSON.map((hero) => {
     }
 );
 
-
-
 export const $allHeroes = atom(JSONHeroes);
 
 export const $heroesOnDuty  = computed($allHeroes, allHeroes => {

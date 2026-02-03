@@ -1,3 +1,5 @@
+import type {Mission} from "../../MissionTypes.ts";
+
 import React, { useEffect, useMemo } from "react";
 import { useStore } from '@nanostores/react';
 import { $allMissions } from "../../MissionStores.ts";
@@ -10,21 +12,21 @@ function getRandomInt(min: number, max: number): number {
 function Missions() {
     const missions = useStore($allMissions);
 
-    // 1. Memoize the random mission so it doesn't change on every render
-    const mission = useMemo(() => {
-        if (missions.length === 0) return null;
-        const missionIndex = getRandomInt(0, missions.length);
-        return missions[missionIndex];
-    }, [missions]); // Only pick a new mission if the list of missions changes
+    const [mission, setMission] = React.useState<Mission | null>(null);
 
-    // 2. Update the store inside an effect
     useEffect(() => {
-        if (mission) {
-            $maxHeroesOnDuty.set(mission.required_heroes);
-        }
-    }, [mission]); // Only update when the mission changes
+        if (missions.length > 0 && !mission) {
+            const missionIndex = Math.floor(Math.random() * missions.length);
+            const selectedMission = missions[missionIndex];
 
-    if (!mission) return <p>Loading missions...</p>;
+            setMission(selectedMission);
+            $maxHeroesOnDuty.set(selectedMission.required_heroes);
+        }
+    }, [missions]);
+
+
+    if (!mission) return <p>Loading mission...</p>;
+
 
     return (
         <article>

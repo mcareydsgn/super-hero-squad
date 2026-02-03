@@ -173,12 +173,12 @@
     "title": "The Phoenix's Wrath",
     "mission": "Jean Grey, as the Phoenix, is losing control of the immense power coursing through her. As the Phoenix Force threatens to consume her and the universe, the X-Men must confront their friend and stop the cosmic entity from burning everything to ash.",
     "mission_stats": {
-      "intelligence": "85",
-      "strength": "90",
-      "speed": "75",
-      "durability": "85",
-      "power": "100",
-      "combat": "90"
+      "intelligence": 85,
+      "strength": 90,
+      "speed": 75,
+      "durability": 85,
+      "power": 100,
+      "combat": 90
     },
     "required_heroes": 5,
     "complete": false
@@ -187,12 +187,12 @@
     "title": "The Galactic Empire's Return",
     "mission": "A new threat emerges in the form of an Imperial remnant, led by a dark Force-sensitive leader determined to reclaim the galaxy. The New Republic, along with old and new Jedi, must unite to stop this rise of darkness from threatening the balance of the Force.",
     "mission_stats": {
-      "intelligence": "90",
-      "strength": "75",
-      "speed": "85",
-      "durability": "80",
-      "power": "85",
-      "combat": "90"
+      "intelligence": 90,
+      "strength": 75,
+      "speed": 85,
+      "durability": 80,
+      "power": 85,
+      "combat": 90
     },
     "required_heroes": 4,
     "complete": false
@@ -201,12 +201,12 @@
     "title": "The Crisis of Infinite Earths",
     "mission": "The Anti-Monitor has begun his final assault on the Multiverse, erasing entire worlds from existence. Heroes from every dimension, including the Justice League, the Titans, and even the Flash's team, must unite to stop him and save the Multiverse from collapse.",
     "mission_stats": {
-      "intelligence": "90",
-      "strength": "85",
-      "speed": "90",
-      "durability": "85",
-      "power": "95",
-      "combat": "90"
+      "intelligence": 90,
+      "strength": 85,
+      "speed": 90,
+      "durability": 85,
+      "power": 95,
+      "combat": 90
     },
     "required_heroes": 10,
     "complete": false

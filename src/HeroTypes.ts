@@ -1,5 +1,4 @@
-import StartHeroesJSON from "./assets/starter-heroes.json";
-import {atom} from "nanostores";
+
 
 export interface PowerStats  {
     "intelligence": string,

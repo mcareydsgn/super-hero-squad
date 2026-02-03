@@ -24,7 +24,7 @@ function HeroSquad() {
         let remainingSlots = maxHeroesOnDuty - totalOnDuty;
         while (remainingSlots > 0) {
             heroCards.push( (
-                <article key={`remainingSlots_${remainingSlots}`} className={"mini-hero-slot"}></article>
+                <article key={`remainingSlots_${remainingSlots}`} className={"mini-hero-card hero-placeholder"}></article>
             ) );
             remainingSlots -= 1;
         }

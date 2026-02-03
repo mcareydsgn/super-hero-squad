@@ -4,8 +4,9 @@ import Layout from '../layouts/Layout.astro';
 import HeroRecruits from "../components/ui/HeroRecruits";
 import HeroSquad from '../components/ui/HeroSquad';
 import Missions from '../components/ui/Missions';
+import Search from '../components/Search'
+import MobileTray from '../components/ui/MobileTray.astro';
 
-import {$allHeroes} from "../HeroesStore";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 
@@ -14,19 +15,26 @@ import {$allHeroes} from "../HeroesStore";
 <Layout>
     <header>
         <hgroup>
-            <h1>Hero Dispatcher</h1>
+            <h1>Calling All Heroes</h1>
             <h2>Assemble your team and take on multiple crises across the universe.</h2>
         </hgroup>
     </header>
     <main>
-        <section class="squad">
+        <button class="button accent team-toggle round" type="button" commandfor="hero-squad" command="--show-tray" slot="button">
+            <span class="sr-only"> Show Team </span>
+            <svg width="24" height="24"
+                 fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" >
+                <path d="M12 5a3 3 0 1 0 0 6 3 3 0 1 0 0-6m1 7h-2c-2.76 0-5 2.24-5 5v.5c0 .83.67 1.5 1.5 1.5h9c.83 0 1.5-.67 1.5-1.5V17c0-2.76-2.24-5-5-5m-6.5-1c.47 0 .9-.12 1.27-.33a5.03 5.03 0 0 1-.42-4.52C7.09 6.06 6.8 6 6.5 6 5.06 6 4 7.06 4 8.5S5.06 11 6.5 11m-.39 1H5.5C3.57 12 2 13.57 2 15.5v1c0 .28.22.5.5.5H4c0-1.96.81-3.73 2.11-5m11.39-1c1.44 0 2.5-1.06 2.5-2.5S18.94 6 17.5 6c-.31 0-.59.06-.85.15a5.03 5.03 0 0 1-.42 4.52c.37.21.79.33 1.27.33m1 1h-.61A6.97 6.97 0 0 1 20 17h1.5c.28 0 .5-.22.5-.5v-1c0-1.93-1.57-3.5-3.5-3.5"></path>
+            </svg>
+        </button>
+        <MobileTray subscribedCommand="--show-tray"  id="hero-squad" tagName="section">
             <header>
                 <h3>Your Team</h3>
             </header>
-            <div class="hero-container" >
+            <div class="hero-squad-grid">
                 <HeroSquad client:load></HeroSquad>
             </div>
-        </section>
+        </MobileTray>
         <div class="mission-control">
             <section>
                 <header>
@@ -37,6 +45,7 @@ import {$allHeroes} from "../HeroesStore";
             <section>
                 <header>
                     <h3>Hero Recruits</h3>
+                    <Search client:load></Search>
                 </header>
                 <div class="grid">
                     <HeroRecruits client:load></HeroRecruits>
@@ -45,27 +54,73 @@ import {$allHeroes} from "../HeroesStore";
         </div>
     </main>
 </Layout>
-<style>
+<style is:global>
+
+    body:has( #hero-squad.active) {
+        overflow: hidden;
+        height: 100dvh;
+    }
 
     header {
-        text-align: center;
+        max-width: 2000px;
+        margin-inline: auto;
+        padding-left: 4rem;
+        margin-bottom: 2rem;
     }
+
     main{
         display: flex;
         gap: 3rem;
         max-width: 2000px;
         margin-inline:auto;
+        padding-inline: clamp(1rem, 3vw, 4rem);
+        container-name: main;
+        container-type:inline-size;
+        position: relative;
+
     }
 
 
-    .hero-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+    .team-toggle {
+        position: fixed;
+        top: .5rem;
+        left: .5rem;
+        z-index: 6;
+        @container main (width > calc(( 275px * 3) + (2.5rem * 3))) {
+            display: none;
+        }
     }
 
-    .mission-control {
-        flex: 1;
-    }
 
+    #hero-squad {
+
+        .hero-squad-grid {
+            display: none;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+
+            @container main (width > calc(( 275px * 3) + (2.5rem * 3))) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        &.active {
+            & .hero-squad-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                @container main (width > calc(( 275px * 3) + (2.5rem * 3))) {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+
+        &:not(.active) {
+            display: none;
+            @container main (width > calc(( 275px * 3) + (2.5rem * 3))) {
+                display: block;
+            }
+        }
+
+    }
 </style>

@@ -1,0 +1,69 @@
+---
+const { tagName, id, classList, subscribedCommand } = Astro.props;
+
+const Element = tagName;
+
+---
+
+<init-command data-command={subscribedCommand}>
+    <Element id={id} class:list={classList} class="mobileTray">
+        <slot />
+    </Element>
+</init-command>
+<script>
+    class InitCommand extends HTMLElement {
+        constructor() {
+            super();
+        }
+        connectedCallback() {
+            this.firstElementChild?.addEventListener("command", this.#handleCommand.bind(this));
+        }
+
+        disconnectedCallback() {
+            this.firstElementChild?.removeEventListener("command", this.#handleCommand);
+        }
+
+        #handleCommand(event) {
+            if (event.command === this.dataset.command) {
+                event.target.classList.toggle("active");
+            }
+        }
+
+    }
+
+    customElements.define('init-command', InitCommand);
+</script>
+<style>
+    init-command {
+        display: contents;
+    }
+
+    .mobileTray {
+        &.active {
+            display: block;
+            position: fixed;
+            z-index: 5;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--main-color-900);
+            padding: 3rem;
+            height: 100dvh;
+            overflow: auto;
+            box-sizing: border-box
+        }
+
+        @container main (width > calc(( 275px * 4) + (2.5rem * 3))) {
+            &.active {
+                position: relative;
+                display: initial;
+                background-color:unset;
+                padding: 3rem;
+                height: unset;
+                overflow: unset;
+            }
+        }
+    }
+
+
+</style>

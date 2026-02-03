@@ -1,0 +1,24 @@
+:root {
+    --main-color: #002075;
+    --accent-color: #ee964b;
+
+    --main-color-900: oklch(from var(--main-color) 0 c h);
+    --main-color-800: oklch(from var(--main-color) .1 c h);
+    --main-color-700: oklch(from var(--main-color) .2 c h);
+    --main-color-600: oklch(from var(--main-color) .3 c h);
+
+    --accent-color-100: oklch(from var(--accent-color) .9 c h);
+    --accent-color-200: oklch(from var(--accent-color) .8 c h);
+    --accent-color-300: oklch(from var(--accent-color) .7 c h);
+    --accent-color-400: oklch(from var(--accent-color) .6 c h);
+
+
+    --body-color: white;
+    --body-font-size: 1rem;
+    --heading-font-size: 2rem;
+    --heading-font-family: "Racing Sans One", sans-serif;
+
+    --main-grid-column-size: 200px;
+    --main-grid-gap-size: 2rem;
+
+}

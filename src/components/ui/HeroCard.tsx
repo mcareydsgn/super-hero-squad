@@ -23,7 +23,8 @@ function HeroPowerStats({...rest}: PowerStats) {
                             const [key, value] = entry;
                                 return (
                                     <li key={key}>
-                                        <span>{key}:</span><span>{value}</span>
+                                        <span className="stat-number">{value}</span>
+                                        <span className="stat-name">{key}</span>
                                     </li>
                                 )
                         })
@@ -49,13 +50,14 @@ function HeroCard({hero, showBioLinks = false, buttonText} : Props ) {
             <article className="hero-card">
                 <div>
                     <img src={hero.imageSource} alt=""/>
-                </div>
-                <div className="hero-card-content">
                     <h3>{hero.name}</h3>
-                    {hero.powerstats && (<HeroPowerStats {...hero.powerstats} />)}
-                    <button type={"button"} onClick={() => handleHeroCardAction(hero.id, hero.onDuty)}>{buttonText}</button>
-                    <a href={`/hero-bio/${hero.id}`}>Read Full Bio</a>
                 </div>
+                <a href={`/hero-bio/${hero.id}`}>Read Full Bio</a>
+                <div className="hero-card-content">
+                    {hero.powerstats && (<HeroPowerStats {...hero.powerstats} />)}
+
+                </div>
+                <button className={'button accent'} type={"button"} onClick={() => handleHeroCardAction(hero.id, hero.onDuty)}>{buttonText}</button>
             </article>
         </>
     );
