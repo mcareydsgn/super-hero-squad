@@ -2,6 +2,9 @@
 <!doctype html>
 <html lang="en">
 	<head>
+        <style is:inline>
+            @layer resets, layout, components, utilities;
+        </style>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,11 +16,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Racing+Sans+One&display=swap" rel="stylesheet">
 
     </head>
+
 	<body>
 		<slot />
 	</body>
 </html>
 
 <style is:global>
-    @import "../styles/layout.css";
+    @import "../global-styles/global.css";
 </style>

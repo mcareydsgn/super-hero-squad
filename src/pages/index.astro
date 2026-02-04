@@ -1,10 +1,10 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
-import HeroRecruits from "../components/ui/HeroRecruits";
-import HeroSquad from '../components/ui/HeroSquad';
-import Missions from '../components/ui/Missions';
-import Search from '../components/Search'
+import HeroRecruits from "../components/index/HeroRecruits";
+import HeroSquad from '../components/index/HeroSquad';
+import Missions from '../components/index/Missions';
+import Search from '../components/index/Search'
 import MobileTray from '../components/ui/MobileTray.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -42,7 +42,7 @@ import MobileTray from '../components/ui/MobileTray.astro';
                 </header>
                 <Missions client:load></Missions>
             </section>
-            <section>
+            <section class="hero-recruits">
                 <header>
                     <h3>Hero Recruits</h3>
                     <Search client:load></Search>
@@ -61,23 +61,11 @@ import MobileTray from '../components/ui/MobileTray.astro';
         height: 100dvh;
     }
 
-    header {
+    body  > header {
         max-width: 2000px;
         margin-inline: auto;
         padding-left: 4rem;
         margin-bottom: 2rem;
-    }
-
-    main{
-        display: flex;
-        gap: 3rem;
-        max-width: 2000px;
-        margin-inline:auto;
-        padding-inline: clamp(1rem, 3vw, 4rem);
-        container-name: main;
-        container-type:inline-size;
-        position: relative;
-
     }
 
 
@@ -91,36 +79,11 @@ import MobileTray from '../components/ui/MobileTray.astro';
         }
     }
 
-
-    #hero-squad {
-
-        .hero-squad-grid {
-            display: none;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-
-            @container main (width > calc(( 275px * 3) + (2.5rem * 3))) {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        &.active {
-            & .hero-squad-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                @container main (width > calc(( 275px * 3) + (2.5rem * 3))) {
-                    grid-template-columns: 1fr 1fr;
-                }
-            }
-        }
-
-        &:not(.active) {
-            display: none;
-            @container main (width > calc(( 275px * 3) + (2.5rem * 3))) {
-                display: block;
-            }
-        }
-
+    .mission-control {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
+
+
 </style>

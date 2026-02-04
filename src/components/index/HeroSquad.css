@@ -1,0 +1,32 @@
+@layer layout {
+    #hero-squad {
+        .hero-squad-grid {
+            display: none;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+
+            @container main (width > calc(( 275px * 3) + (2.5rem * 3))) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        &.active {
+            & .hero-squad-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                @container main (width > calc(( 275px * 3) + (2.5rem * 3))) {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+
+        &:not(.active) {
+            display: none;
+            @container main (width > calc(( 275px * 3) + (2.5rem * 3))) {
+                display: block;
+            }
+        }
+    }
+}
+

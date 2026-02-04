@@ -1,5 +1,7 @@
 const prerender = false;
 import React from "react";
+
+import "./HeroCard.css"
 import type { Hero, PowerStats} from '../../HeroTypes.ts'
 import {$toggleHeroDutyStatus} from'../../HeroesStore.ts'
 
@@ -36,7 +38,7 @@ function HeroPowerStats({...rest}: PowerStats) {
     return null;
 }
 
-function HeroCard({hero, showBioLinks = false, buttonText} : Props ) {
+function MiniHeroCard({hero, showBioLinks = false, buttonText} : Props ) {
 
     const handleHeroCardAction = (id :string, onDuty:boolean) => {
         $toggleHeroDutyStatus(id, onDuty);
@@ -68,4 +70,4 @@ function HeroCard({hero, showBioLinks = false, buttonText} : Props ) {
     );
 }
 
-export default HeroCard;
+export default MiniHeroCard;

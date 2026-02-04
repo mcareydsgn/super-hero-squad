@@ -1,19 +1,37 @@
 import type { Hero} from './HeroTypes.ts'
-
 import {atom, computed, type ReadableAtom} from 'nanostores';
-
 import StartHeroesJSON from "./assets/starter-heroes.json";
 
-const JSONHeroes : Hero[] =   StartHeroesJSON.map((hero) => {
-        const {id, name, powerstats } = hero;
-        const {publisher, alignment} = hero.biography;
-        const {url: imageSource} = hero.image;
 
-        return {id, name, powerstats, publisher, alignment, imageSource, onDuty : false};
+export const $mapHeroData = (data:any) => {
+    let hero: Hero[] = data;
+    if (!Array.isArray(data)) {
+        hero = [data]
     }
-);
+
+    return hero.map((hero:any) => {
+            const {id, name, powerstats } = hero;
+            const {publisher, alignment} = hero.biography;
+            const {url: imageSource} = hero.image;
+            return {id, name, powerstats, publisher, alignment, imageSource, onDuty : false};
+        }
+    )
+
+}
+
+
+const JSONHeroes : Hero[] =   $mapHeroData(StartHeroesJSON);
 
 export const $allHeroes = atom(JSONHeroes);
+
+
+export const  $addToAllHeroes = ((hero :any) => {
+    const currentHeroes = structuredClone($allHeroes.get());
+    // @ts-ignore
+    $allHeroes.set([...currentHeroes, ...[hero]]);
+
+    console.log($allHeroes.get())
+});
 
 export const $heroesOnDuty  = computed($allHeroes, allHeroes => {
     return allHeroes.filter(hero =>  hero.onDuty);

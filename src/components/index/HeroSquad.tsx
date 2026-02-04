@@ -1,8 +1,10 @@
 
 import React from "react";
 import { useStore } from '@nanostores/react';
+
+import "./HeroSquad.css"
 import { $heroesOnDuty, $totalOnDuty, $maxHeroesOnDuty} from "../../HeroesStore.ts";
-import MiniHeroCard from "./MiniHeroCard.tsx";
+import MiniHeroCard from "../ui/MiniHeroCard.tsx";
 
 
 function HeroSquad() {
@@ -31,8 +33,6 @@ function HeroSquad() {
 
         return heroCards;
     }
-
-console.log(maxHeroesOnDuty - totalOnDuty)
 
     return (
         <>

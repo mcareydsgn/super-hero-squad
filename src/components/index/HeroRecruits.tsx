@@ -1,8 +1,10 @@
 
 import React from "react";
 import { useStore } from '@nanostores/react';
+
+import './HeroRecruits.css'
 import {$allHeroes} from "../../HeroesStore.ts";
-import HeroCard from "./HeroCard.tsx";
+import HeroCard from "../ui/HeroCard.tsx";
 
 
 function HeroRecruits() {
@@ -23,7 +25,6 @@ function HeroRecruits() {
                         return null;
                     }
                 })
-
             }
         </>
     )

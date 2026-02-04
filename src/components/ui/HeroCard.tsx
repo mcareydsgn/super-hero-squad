@@ -1,5 +1,7 @@
 const prerender = false;
 import React from "react";
+
+import "./HeroCard.css"
 import type { Hero, PowerStats} from '../../HeroTypes.ts'
 import {$totalOnDuty, $maxHeroesOnDuty, $toggleHeroDutyStatus} from '../../HeroesStore.ts'
 

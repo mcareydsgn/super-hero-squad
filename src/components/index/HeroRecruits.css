@@ -1,0 +1,9 @@
+
+.hero-recruits :where(header) {
+    background: linear-gradient(
+            oklch(from var(--main-color-600) l c h / .5) 20%,
+            oklch(from var(--main-color-900) l c h / .7)) ;
+    padding: 2rem;
+    margin-block-end: 2rem;
+    backdrop-filter: blur(10px);
+}
