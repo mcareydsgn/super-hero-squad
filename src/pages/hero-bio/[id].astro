@@ -11,9 +11,12 @@ const data = await response.json();
 const heroOrVillain = data.biography.alignment === 'good' ? 'Hero' : 'Villain';
 ---
 <Layout title={`${heroOrVillain} Spotlight: ${data.name}`}>
-    <header>
+    <header class="spotlight-header">
         <hgroup>
-            <h1>{heroOrVillain} Spotlight: {data.name}</h1>
+            <h1 class="hero-heading">
+                <span >{heroOrVillain} Spotlight:</span>
+                <span>{data.name}</span>
+            </h1>
         </hgroup>
         <a class="return-home-link" href="/">Return Home</a>
     </header>
@@ -48,10 +51,27 @@ const heroOrVillain = data.biography.alignment === 'good' ? 'Hero' : 'Villain';
 </Layout>
 <style>
 
+    .spotlight-header {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .hero-heading {
+        display: flex;
+        flex-direction: column;
+        line-height: .9;
+        & span:first-of-type {
+            text-shadow: none;
+            font-size: clamp(2rem, 3vw, 3rem);
+        }
+    }
+
+
+
     .return-home-link {
-        position: fixed;
+        position: relative;
+        align-self: start;
         top: 1rem;
-        right: 1rem;
         background-color: var(--base-color-900);
         padding: 1rem;
         border: 3px solid var(--accent-color-400);

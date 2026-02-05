@@ -20,7 +20,7 @@ body {
 body  > header {
     max-width: 2000px;
     margin-inline: auto;
-    padding-left: 4rem;
+    padding-inline: clamp(1rem, 3vw, 4rem);
     margin-bottom: 2rem;
 }
 
@@ -50,7 +50,6 @@ h2 {
     padding: 1rem;
     border-radius: 10px;
     backdrop-filter: blur(2px);
-    width: max-content;
 }
 
 .grid {
