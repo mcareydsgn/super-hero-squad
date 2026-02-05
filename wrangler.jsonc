@@ -1,7 +1,11 @@
 {
   "name": "calling-all-heros-app",
+  "main": "./dist/_worker.js/index.js",
   "compatibility_date": "2026-02-05", // Update to the day you deploy
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist/client"         // Points to CSS/JS/Images
+  },
+  "observability": {
+    "enabled": true
   }
 }
