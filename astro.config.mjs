@@ -1,14 +1,12 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import node from '@astrojs/node'; // 1. Import the adapter
+import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
     build: {
         assets: 'assets',
     },
-    adapter: node({
-        mode: 'standalone',
-    }),
+    adapter: cloudflare(),
     integrations: [react()]
 });
