@@ -1,0 +1,17 @@
+:root {
+    --glass-card-padding: clamp( 1rem, 2vw, 2rem);
+    --glass-card-backdrop-blur: 10px;
+    --glass-card-border-radius: var(--glass-card-padding);
+}
+@layer components {
+    .glass-card {
+        background: linear-gradient(
+                oklch(from var(--base-color-700) l c h / .5) 20%,
+                oklch(from var(--base-color-900) l c h / .7));
+        padding: var(--glass-card-padding);
+        backdrop-filter: blur(var(--glass-card-backdrop-blur));
+        border-radius: var(--glass-card-border-radius);
+        corner-shape: bevel;
+        border: 1px solid oklch(from var(--base-color-600) .6 c h );
+    }
+}

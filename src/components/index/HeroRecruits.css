@@ -1,9 +1,14 @@
 
-.hero-recruits :where(header) {
-    background: linear-gradient(
-            oklch(from var(--main-color-600) l c h / .5) 20%,
-            oklch(from var(--main-color-900) l c h / .7)) ;
-    padding: 2rem;
-    margin-block-end: 2rem;
-    backdrop-filter: blur(10px);
+@layer components {
+    .hero-recruits header:has([open]) {
+        --transition-timing: .2s ease-in-out;
+        transition: border var(--transition-timing);
+    }
+
+    .hero-recruits header:has([open]) {
+        position: relative;
+        z-index: 2;
+        border-bottom:none;
+    }
+
 }

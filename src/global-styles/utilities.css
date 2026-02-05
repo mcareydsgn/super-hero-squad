@@ -1,9 +1,8 @@
 :root {
-    --stacked-gap-clamp-factor: 1;
-    --stacked-gap: clamp(
-            calc(1rem * var(--stacked-gap-clamp-factor)),
-            calc(3vw  * var(--stacked-gap-clamp-factor)),
-            calc(2rem) * var(--stacked-gap-clamp-factor));
+    --stacked-gap-clamp-factor: var(--spacing-clamp-factor);
+    --stacked-gap-clamp-min: 1rem;
+    --stacked-gap-clamp-mid: 3vw;
+    --stacked-gap-clamp-max: 2rem;
 }
 
 @layer utilities {
@@ -11,10 +10,14 @@
     .stacked {
         display: flex;
         flex-direction: column;
-        gap: var(--stacked-gap);
+        gap: clamp(
+                calc(var(--stacked-gap-clamp-min) * var(--stacked-gap-clamp-factor)),
+                calc(var(--stacked-gap-clamp-mid) * var(--stacked-gap-clamp-factor)),
+                calc(var(--stacked-gap-clamp-max) * var(--stacked-gap-clamp-factor))
+        );
 
         & .stacked {
-            --stacked-gap-clamp-factor: .75;
+            --stacked-gap-clamp-factor: .5;
         }
     }
 

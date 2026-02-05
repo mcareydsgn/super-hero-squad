@@ -20,7 +20,7 @@ import MobileTray from '../components/ui/MobileTray.astro';
         </hgroup>
     </header>
     <main>
-        <button class="button accent team-toggle round" type="button" commandfor="hero-squad" command="--show-tray" slot="button">
+        <button class="button secondary team-toggle round" type="button" commandfor="hero-squad" command="--show-tray" slot="button">
             <span class="sr-only"> Show Team </span>
             <svg width="24" height="24"
                  fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" >
@@ -31,27 +31,28 @@ import MobileTray from '../components/ui/MobileTray.astro';
             <header>
                 <h3>Your Team</h3>
             </header>
-            <div class="hero-squad-grid">
+            <div class="hero-squad-grid"  aria-live="polite">
                 <HeroSquad client:load></HeroSquad>
             </div>
         </MobileTray>
         <div class="mission-control">
-            <section>
+            <section class="mission-brief glass-card stacked">
                 <header>
                     <h3>Mission Brief</h3>
                 </header>
                 <Missions client:load></Missions>
             </section>
-            <section class="hero-recruits">
-                <header>
+            <section class="hero-recruits stacked">
+                <header class="glass-card">
                     <h3>Hero Recruits</h3>
                     <Search client:load></Search>
                 </header>
-                <div class="grid">
+                <div class="grid" aria-live="polite">
                     <HeroRecruits client:load></HeroRecruits>
                 </div>
             </section>
         </div>
+
     </main>
 </Layout>
 <style is:global>
@@ -82,7 +83,17 @@ import MobileTray from '../components/ui/MobileTray.astro';
     .mission-control {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        flex-grow:1;
+
+        --spacing-clamp-min: 1rem;
+        --spacing-clamp-mid: 3vw;
+        --spacing-clamp-max: 2rem;
+
+        gap: clamp(
+            calc( var(--spacing-clamp-min) * var(--spacing-clamp-factor)),
+            calc( var(--spacing-clamp-mid) * var(--spacing-clamp-factor)),
+            calc( var(--spacing-clamp-max) * var(--spacing-clamp-factor))
+        );
     }
 
 

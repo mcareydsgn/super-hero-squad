@@ -25,7 +25,21 @@
         "power": 180,
         "combat": 270
       },
-      "required_heroes": 3,
+      "required_heroes":4,
+      "complete": false
+    },
+    {
+      "title": "The Annihilation Wave",
+      "mission": "The universe is threatened by the Annihilation Wave, led by Annihilus, as it sweeps through galaxies, leaving nothing but destruction in its wake. Heroes from across the HeroVerse, must team up to stop the wave before it consumes everything.",
+      "mission_stats": {
+        "intelligence": 325,
+        "strength": 438,
+        "speed": 405,
+        "durability": 485,
+        "power":  517,
+        "combat": 547
+      },
+      "required_heroes": 6,
       "complete": false
     },
     {
@@ -168,7 +182,20 @@
       "required_heroes": 7,
       "complete": false
     },
-
+  {
+    "title": "Reign of the White Lanterns",
+    "mission": "A new, unprecedented power emerges in the form of the White Lanterns, wielding the power of life itself. While their goal is to bring about universal peace, their methods are destabilizing the galaxy. The Green Lantern Corps, Justice League, and other cosmic heroes must confront this new force before it reshapes the universe.",
+    "mission_stats": {
+      "intelligence": 325,
+      "strength": 438,
+      "speed": 405,
+      "durability": 485,
+      "power":  517,
+      "combat": 547
+    },
+    "required_heroes": 5,
+    "complete": false
+  },
   {
     "title": "The Phoenix's Wrath",
     "mission": "Jean Grey, as the Phoenix, is losing control of the immense power coursing through her. As the Phoenix Force threatens to consume her and the universe, the X-Men must confront their friend and stop the cosmic entity from burning everything to ash.",
@@ -211,20 +238,7 @@
     "required_heroes": 10,
     "complete": false
   },
-  {
-    "title": "Reign of the White Lanterns",
-    "mission": "A new, unprecedented power emerges in the form of the White Lanterns, wielding the power of life itself. While their goal is to bring about universal peace, their methods are destabilizing the galaxy. The Green Lantern Corps, Justice League, and other cosmic heroes must confront this new force before it reshapes the universe.",
-    "mission_stats": {
-      "intelligence": 325,
-      "strength": 438,
-      "speed": 405,
-      "durability": 485,
-      "power":  517,
-      "combat": 547
-    },
-    "required_heroes": 5,
-    "complete": false
-  },
+
   {
     "title": "The Sith Eternal",
     "mission": "A secret order of Sith, led by a resurrected Darth Sidious, has begun preparing for galactic conquest. With the rise of Sith Eternal, your team must confront this new threat and stop the Sith from taking over the galaxy again.",
@@ -239,20 +253,7 @@
     "required_heroes": 5,
     "complete": false
   },
-  {
-    "title": "The Annihilation Wave",
-    "mission": "The universe is threatened by the Annihilation Wave, led by Annihilus, as it sweeps through galaxies, leaving nothing but destruction in its wake. Heroes from across the HeroVerse, must team up to stop the wave before it consumes everything.",
-    "mission_stats": {
-      "intelligence": 325,
-      "strength": 438,
-      "speed": 405,
-      "durability": 485,
-      "power":  517,
-      "combat": 547
-    },
-    "required_heroes": 6,
-    "complete": false
-  },
+
   {
     "title": "The Invasion of the Dark Order",
     "mission": "A powerful cosmic entity, the Dark Order, emerges from the depths of space with an army of twisted beings bent on conquering the galaxy. Cosmic heroes must stand together to prevent universal extinction.",

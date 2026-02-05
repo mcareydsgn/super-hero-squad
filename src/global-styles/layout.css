@@ -26,7 +26,6 @@ main{
     container-name: main;
     container-type:inline-size;
     position: relative;
-
 }
 
 h1{
@@ -35,16 +34,16 @@ h1{
     font-style: normal;
     color: white;
     font-size: clamp(3rem, 5vw, 6rem);
-    text-shadow:  2px  2px 0  var(--accent-color-200) , 5px  5px 0  var(--accent-color-400);
+    text-shadow:  2px  2px 0  var(--secondary-color-200) , 5px  5px 0  var(--secondary-color-400);
     margin-bottom: .5rem;
 }
 
 h2 {
-    background-color: oklch(from var(--main-color-900) l c h / .7) ;
-    display: inline;
+    background-color: oklch(from var(--base-color-900) l c h / .7) ;
     padding: 1rem;
     border-radius: 10px;
     backdrop-filter: blur(2px);
+    width: max-content;
 }
 
 .grid {

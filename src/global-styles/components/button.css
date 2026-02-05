@@ -1,29 +1,102 @@
+:root {
+    --button-padding: .5rem 1rem;
+    --button-font-size: 1rem;
+    --button-font-weight: bold;
+    --button-text-color: inherit;
+}
+
 @layer components {
     .button {
         display: flex;
         justify-content: center;
-        align-items: center;
-        color: inherit;
-        font-weight: bold;
-        font-size: 1.2rem;
         align-self: center;
-        padding: .5rem 1rem;
+        align-items: center;
+        color: var(--button-text-color);
+        font-weight: var(--button-font-weight);
+        font-size: var(--button-font-size);
+        padding: var(--button-padding);
         cursor: pointer;
+        flex-shrink: 0;
+        transition: all var(--transition-timing);
 
-        &.main {
-            background-color: var(--main-color-600);
+        &.base {
+            background-color: var(--base-color-600);
+
+            &:hover,
+            &:active {
+                background-color: var(--base-color);
+            }
         }
+
+        &.secondary {
+            background-color: var(--secondary-color-300);
+            --button-text-color: var(--base-color-800);
+
+            &:hover,
+            &:active {
+                background-color: var(--secondary-color-200);
+            }
+        }
+
         &.accent {
             background-color: var(--accent-color-300);
+            --button-text-color: var(--base-color-800);
+
+            &:hover,
+            &:active {
+                background-color: var(--accent-color-200);
+            }
         }
 
+
+
+
         &.round {
-            width: 50px;
-            height: 50px;
+            width: clamp(35px, 4vw, 45px);
+            height: clamp(35px, 4vw, 45px);
             border-radius: 100%;
             padding: 0;
         }
+
     }
 
+    .button-text {
+        background-color: transparent;
+        color: var(--button-text-color);
+        font-weight: var(--button-font-weight);
+        font-size: var(--button-font-size);
+        padding:0);
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: all var(--transition-timing);
+
+        &.base {
+            --button-text-color: oklch(from var(--base-color-800) .7 c h );
+
+            &:hover,
+            &:active {
+                --button-text-color: oklch(from var(--base-color-800) .9 c h );
+            }
+        }
+
+        &.secondary {
+            --button-text-color: oklch(from var(--secondary-color-400) .7 c h );
+
+            &:hover,
+            &:active {
+                --button-text-color: var(--secondary-color-200);
+            }
+        }
+
+        &.accent {
+            --button-text-color: oklch(from var(--accent-color-400) .7 c h );
+
+            &:hover,
+            &:active {
+                --button-text-color:  oklch(from var(--accent-color-400) .9 c h );
+            }
+        }
+
+    }
 }
 

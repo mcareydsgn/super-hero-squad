@@ -1,0 +1,13 @@
+:root {
+    --input-padding: .5rem;
+}
+@layer components {
+    :where(input) {
+        padding: var(--input-padding)
+    }
+
+    :where(label) {
+        margin-bottom: var(--input-padding);
+    }
+}
+

@@ -1,43 +1,87 @@
-search {
-    & form {
-        & > div {
-            width: 100%;
-            display: inline-flex;
-        }
-    }
+:root {
+    --search-spacing-clamp :  clamp(
+            calc(var(--spacing-clamp-min) * var(--spacing-clamp-factor)),
+            calc(var(--spacing-clamp-mid) * var(--spacing-clamp-factor)),
+            calc(var(--spacing-clamp-max) * var(--spacing-clamp-factor))
+    );
+
 }
 
-.search-results {
+@layer components {
+    search {
+        & form {
+            & > div {
+                width: 100%;
+                display: inline-flex;
+                margin-bottom:  var(--search-spacing-clamp);
+                & input {
+                    width: 100%;
+                }
+            }
+        }
+    }
 
-    & ul {
-        display: flex;
-        flex-wrap: wrap;
-        position: absolute;
-        z-index: 5;
-        padding: 1rem;
-        width: 100%;
-        left: 0;
-        box-sizing: border-box;
-        gap: 1rem;
-        background: var(--main-color-900) ;
-        backdrop-filter: blur(10px);
-        margin: 0;
+    .search-results {
+        --spacing-clamp-factor: .25;
+        --transition-timing: .1s ease-in-out;
 
-        & button {
+        summary {
+            margin-bottom: 5px;
+        }
+
+
+
+        &[open] ul {
+            opacity: 1;
+            transform: rotateX(0deg);
+
+        }
+
+        &::details-content {
+            transition: content-visibility 600ms allow-discrete;
+        }
+
+
+
+        & ul {
+            position: absolute;
             display: flex;
-            width: 100%;
-            font-weight: normal;
-            font-size: 1rem;
-            background-color: white;
-            color: var(--main-color-800);
-            border: none;
-            & img {
-                aspect-ratio: 1 / 1;
-                max-height: 50px;
-                object-fit: cover;
-                height: 50px;
-                display: block;
-                border: 1px solid var(--accent-color);
+            z-index: 5;
+            padding: var(--search-spacing-clamp);
+            width: calc(100% + 2px);
+            left: -1px;
+            box-sizing: border-box;
+            gap: var(--search-spacing-clamp);
+            background: linear-gradient(oklch(from var(--base-color-900) l c h / 1) 20%, oklch(from var(--base-color-900) l c h / .8));
+            backdrop-filter: blur(10px);
+            margin: 0;
+            overflow-x: auto;
+            list-style: none ;
+            align-items: center;
+            border-radius: 0 0 1rem 1rem;
+            corner-shape: bevel;
+            border: 1px solid oklch(from var(--base-color-600) .6 c h );
+            border-top: none;
+
+            opacity: 0;
+            transition: opacity var(--transition-timing), transform var(--transition-timing);
+            transform: rotateX(-90deg);
+            transform-origin: top;
+
+            & button.hero {
+                font-weight: normal;
+                color: var(--base-color-800);
+                padding: 0;
+                padding-inline-end: var(--search-spacing-clamp);
+                & img {
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                    height: 50px;
+                    display: block;
+                    border: 1px solid var(--secondary-color);
+                    margin-inline-end: var(--search-spacing-clamp);
+                    background-image: url("/kirbydot-user-thumb.png");
+                }
             }
         }
     }

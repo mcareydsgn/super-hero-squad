@@ -1,4 +1,4 @@
-@layer layout {
+@layer components {
     #hero-squad {
         .hero-squad-grid {
             display: none;

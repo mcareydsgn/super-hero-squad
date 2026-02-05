@@ -9,7 +9,9 @@ export const $mapHeroData = (data:any) => {
         hero = [data]
     }
 
-    return hero.map((hero:any) => {
+    return hero.sort((a: Hero, b: Hero) => {
+        return a.name.localeCompare(b.name);
+    }).map((hero:any) => {
             const {id, name, powerstats } = hero;
             const {publisher, alignment} = hero.biography;
             const {url: imageSource} = hero.image;
@@ -28,9 +30,11 @@ export const $allHeroes = atom(JSONHeroes);
 export const  $addToAllHeroes = ((hero :any) => {
     const currentHeroes = structuredClone($allHeroes.get());
     // @ts-ignore
-    $allHeroes.set([...currentHeroes, ...[hero]]);
-
-    console.log($allHeroes.get())
+    if (Array.isArray(hero)) {
+        $allHeroes.set([...currentHeroes, ...hero]);
+    } else {
+        $allHeroes.set([...currentHeroes, ...[hero]]);
+    }
 });
 
 export const $heroesOnDuty  = computed($allHeroes, allHeroes => {

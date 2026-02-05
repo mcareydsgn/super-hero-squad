@@ -1,0 +1,20 @@
+
+@layer components {
+    .mission-brief {
+        position: relative;
+    }
+    .mission-objective {
+        margin-inline: 3rem;
+
+        & p:first-of-type {
+            min-height: 100px;
+        }
+    }
+    .mission-change {
+        position: absolute;
+        display:flex;
+        justify-content: space-between;
+        inset: 1rem;
+    }
+}
+
