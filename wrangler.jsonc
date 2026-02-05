@@ -1,5 +1,5 @@
 {
-  "name": "calling-all-heros-app",
+  "name": "super-hero-squad",
   "main": "./dist/_worker.js/index.js",
   "compatibility_date": "2026-02-05", // Update to the day you deploy
   "assets": {
