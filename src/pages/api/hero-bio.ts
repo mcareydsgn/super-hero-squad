@@ -1,12 +1,12 @@
 import type { APIRoute } from 'astro'
-import { getSecret } from 'astro:env/server';
-
+import { API_KEY } from 'astro:env/server';
+console.log(API_KEY);
 export const GET : APIRoute = async ({ params  }) => {
     const {id} = params;
 
     try {
 
-        const response = await fetch(`https://superheroapi.com/api/${getSecret('API_KEY')}/${id}`, {
+        const response = await fetch(`https://superheroapi.com/api/${API_KEY}/${id}`, {
         });
 
         const data = await response.json();

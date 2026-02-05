@@ -1,13 +1,13 @@
 export const prerender = false;
-import { getSecret } from 'astro:env/server';
 import type {APIRoute} from "astro";
+import { API_KEY } from 'astro:env/server';
 
 export const GET : APIRoute = async ({ params  }) => {
     const {name} = params;
 
     try {
 
-        const response = await fetch(`https://superheroapi.com/api/${getSecret('API_KEY')}/search/${name}`, {
+        const response = await fetch(`https://superheroapi.com/api/${API_KEY}/search/${name}`, {
         });
 
         const data = await response.json();
