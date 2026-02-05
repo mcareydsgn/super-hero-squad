@@ -1,17 +1,7 @@
 {
-  "main": "dist/_worker.js/index.js",
-  "name": "calling-all-heroes-app",
-  // Update to today's date
-  "compatibility_date": "2025-03-25",
-  "compatibility_flags": [
-    "nodejs_compat",
-    "global_fetch_strictly_public"
-  ],
+  "name": "calling-all-heros-app",
+  "compatibility_date": "2026-02-05", // Update to the day you deploy
   "assets": {
-    "binding": "ASSETS",
     "directory": "./dist"
-  },
-  "observability": {
-    "enabled": true
   }
 }
