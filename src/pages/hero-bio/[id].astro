@@ -1,22 +1,111 @@
 ---
 export const prerender = false;
 import Layout from '../../layouts/Layout.astro';
+import Stats from '../../components/ui/Stats.astro'
 
 import {GET} from '../api/hero-bio.ts'
 
 let response = await GET(Astro)
-const data = await response.json()
+const data = await response.json();
 
+const heroOrVillain = data.biography.alignment === 'good' ? 'Hero' : 'Villain';
 ---
-<Layout>
+<Layout title={`${heroOrVillain} Spotlight: ${data.name}`}>
     <header>
         <hgroup>
-            <h1>Hero Name</h1>
-            <h2>Assemble your team and take on multiple crises across the universe.</h2>
-            {data.name}
+            <h1>{heroOrVillain} Spotlight: {data.name}</h1>
         </hgroup>
+        <a class="return-home-link" href="/">Return Home</a>
     </header>
-    <main>
+    <main >
+        <article class="spotlight grid">
+            <figure>
+                <img src={data.image.url} alt="" aria-describedby="fig"/>
+                <figcaption>
+                    <p>Image of {data.name}. Created/Published by {data.biography.publisher}</p>
+                </figcaption>
+            </figure>
 
+            <div class="glass-card biography">
+                <h2>Biography</h2>
+                <Stats stats={data.biography} />
+            </div>
+            <div class="glass-card">
+                <h2>Relationships</h2>
+                <Stats stats={data.connections} />
+                <Stats stats={data.work} />
+            </div>
+            <div class="glass-card">
+                <h2>Power Stats</h2>
+                <Stats stats={data.powerstats} />
+            </div>
+            <div class="glass-card">
+                <h2>Physical Appearance</h2>
+                <Stats stats={data.appearance}/>
+            </div>
+        </article>
     </main>
 </Layout>
+<style>
+
+    .return-home-link {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        background-color: var(--base-color-900);
+        padding: 1rem;
+        border: 3px solid var(--accent-color-400);
+        border-radius: 1rem;
+        corner-shape: bevel;
+        z-index: 1;
+    }
+
+    .spotlight.grid {
+
+        grid-template-columns: 1fr;
+        grid-template-rows:auto auto;
+        grid-auto-flow: dense;
+        width: 100%;
+
+        & figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-row: 1 / -1;
+            margin:0;
+            & img {
+                display: block;
+            }
+
+            & figcaption {
+                background-color: var(--base-color-900);
+                padding: clamp(var(--spacing-clamp-min), var(--spacing-clamp-mid) ,var(--spacing-clamp-max));
+                box-sizing: border-box;
+                & p {
+                    margin: 0;
+                }
+            }
+
+            & :where(img, figcaption) {
+                width: min(100%, 500px);
+
+            }
+        }
+
+        @container main (width > 600px){
+            grid-template-columns: 1fr 1fr;
+            gap:0;
+
+            & figure {
+                padding-right: 2rem;
+            }
+
+        }
+
+        @container main (width > 1000px){
+            grid-template-columns: 1fr 1fr 1fr;
+
+
+        }
+    }
+</style>

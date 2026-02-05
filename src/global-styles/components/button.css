@@ -65,7 +65,7 @@
         color: var(--button-text-color);
         font-weight: var(--button-font-weight);
         font-size: var(--button-font-size);
-        padding:0);
+        padding:0;
         cursor: pointer;
         flex-shrink: 0;
         transition: all var(--transition-timing);

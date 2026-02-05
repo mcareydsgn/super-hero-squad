@@ -1,0 +1,30 @@
+---
+   import './Stats.css'
+
+    const {stats, classList } = Astro.props;
+---
+<dl class={classList}>
+    {
+        Object.entries(stats).map(([key, value]) =>  {
+            let parsedValue = value;
+
+            if (Array.isArray(value)) {
+                console.log(value)
+                parsedValue = value.join(', ');
+            }
+
+            if (parsedValue.includes('-')) {
+                parsedValue = 'not available';
+            }
+
+            return (
+                    <span class="stats-row" :key={key}>
+                        <dt>{key.replace(/-/g, ' ')}</dt>
+                        <dd>{parsedValue}</dd>
+                    </span>
+
+            )
+        })
+    }
+</dl>
+

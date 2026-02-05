@@ -29,18 +29,12 @@ a {
     text-underline-offset: 5px;
 
     &:visited {
-        color: oklch(from var(--base-color-600) .6 c h);
+        color: oklch(from var(--base-color-600) .7 c h);
 
     }
 
     &:hover {
         color: oklch(from var(--accent-color-400) .9 c h );
-    }
-
-
-
-    &:visited:hover {
-        color: oklch(from var(--accent-color-400) .9 c h);
     }
 
 }

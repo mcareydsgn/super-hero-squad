@@ -17,6 +17,13 @@ body {
     color:white;
 }
 
+body  > header {
+    max-width: 2000px;
+    margin-inline: auto;
+    padding-left: 4rem;
+    margin-bottom: 2rem;
+}
+
 main{
     display: flex;
     gap: 3rem;
@@ -58,4 +65,10 @@ h2 {
     @container main (width > calc(( 250px * 4) + (2.5rem * 3))) {
         --main-grid-column-size: 250px;
     }
+}
+
+footer {
+    background-color: var(--base-color-900);
+    padding-block: clamp(var(--spacing-clamp-min), var(--spacing-clamp-mid) ,var(--spacing-clamp-max));
+    padding-inline: clamp(1rem, 3vw, 4rem);
 }

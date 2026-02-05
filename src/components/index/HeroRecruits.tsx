@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, {useEffect} from "react";
 import { useStore } from '@nanostores/react';
 
 import './HeroRecruits.css'
@@ -15,10 +15,10 @@ function HeroRecruits() {
             {
                 allHeroes.map((hero) => {
                     const {id, name, powerstats, publisher, alignment,imageSource, onDuty} = hero;
-
+                    const heroOrVillain = alignment === 'good' ? 'Hero' : 'Villain';
                     if (onDuty == false) {
                         return (
-                            <HeroCard key={id} hero={{id, name, powerstats, publisher, alignment, imageSource, onDuty }} showBioLinks={true} buttonText={"Recruit Hero"}>
+                            <HeroCard key={id} hero={{id, name, powerstats, publisher, alignment, imageSource, onDuty }} showBioLinks={true} buttonText={`Recruit ${heroOrVillain}`}>
                             </HeroCard>
                         )
                     } else {

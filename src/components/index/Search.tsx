@@ -31,9 +31,11 @@ async function searchHero(name : string) {
 function Search() {
     const allHeroes = useStore($allHeroes);
     const [returnedHeroes, setReturnedHeroes]  = useState<Hero[]>([]);
+    const [preformedSearch, setPreformedSearch]  = useState<boolean>(false);
 
     async function handleSubmit(e : React.SubmitEvent<HTMLFormElement>) {
         setReturnedHeroes([]);
+        setPreformedSearch(false);
         e.preventDefault();
 
         try {
@@ -48,6 +50,7 @@ function Search() {
                 setReturnedHeroes((prev) => {
                     return [...prev, ...newHeroes];
                 });
+                setPreformedSearch(true);
             }
 
         } catch (e) {
@@ -58,10 +61,12 @@ function Search() {
     function handleAddAllHeroes(){
         $addToAllHeroes(returnedHeroes);
         setReturnedHeroes([]);
+        setPreformedSearch(false);
     }
 
     function handleClearReturnedHeroes(){
         setReturnedHeroes([]);
+        setPreformedSearch(false);
     }
 
 
@@ -90,12 +95,14 @@ function Search() {
 
                     </div>
 
-                    <p>Search Heroes and Villans from Marvel, DC, Star Wars universes and more!</p>
+                    <p>Search Heroes and Villains from Marvel, DC, Star Wars universes and more!</p>
                 </form>
             </search>
+            {(preformedSearch && returnedHeroes.length == 0) &&
+                <p>No Heroes or Villains Found</p>
+            }
             {returnedHeroes.length > 0  &&
                 <details className="search-results">
-
                     <summary>
                         Found {returnedHeroes.length} Heroes.
 
@@ -122,7 +129,6 @@ function Search() {
                             </li> ))
                         }
                     </ul>
-
                 </details>
             }
       </>

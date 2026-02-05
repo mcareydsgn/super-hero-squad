@@ -1,0 +1,25 @@
+@layer components {
+    dl {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        & span {
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-template-rows: subgrid;
+            grid-column: 1 / -1;
+            padding:.5rem;
+
+
+            &:nth-of-type(odd) {
+                background-color: oklch(from var(--accent-color-400) .8 .2 h / .2);
+                border-radius: .5rem;
+                corner-shape: bevel;
+            }
+        }
+    }
+
+    dt {
+        text-transform: capitalize;
+    }
+}

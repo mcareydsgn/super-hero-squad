@@ -1,3 +1,7 @@
+---
+    const {title} = Astro.props;
+---
+
 
 <!doctype html>
 <html lang="en">
@@ -10,7 +14,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Calling All Heroes</title>
+		<title>{title}</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Racing+Sans+One&display=swap" rel="stylesheet">
@@ -19,6 +23,12 @@
 
 	<body>
 		<slot />
+        <footer>
+            <h3>Credits</h3>
+            <p>This site was built with <a href="https://astro.build/" target="_blank">Astro <span class="sr-only">(Opens In New Window)</span></a>,
+                <a href="https://react.dev/" target="_blank">React <span class="sr-only">(Opens In New Window)</span></a>, <a href="https://www.typescriptlang.org/"target="_blank">TypeScript <span class="sr-only">(Opens In New Window)</span></a>,
+                <a href="https://www.superheroapi.com/index.html" target="_blank">SuperHeroAPi <span class="sr-only">(Opens In New Window)</span></a>, <a href="https://boxicons.com/" target="_blank">BoxIcons <span class="sr-only">(Opens In New Window)</span></a>. AI use was limited to understanding TypeScript errors, React errors, and generating missions.
+        </footer>
 	</body>
 </html>
 

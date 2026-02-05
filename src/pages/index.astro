@@ -12,7 +12,7 @@ import MobileTray from '../components/ui/MobileTray.astro';
 
 ---
 
-<Layout>
+<Layout title="Calling All Heroes">
     <header>
         <hgroup>
             <h1>Calling All Heroes</h1>
@@ -55,18 +55,11 @@ import MobileTray from '../components/ui/MobileTray.astro';
 
     </main>
 </Layout>
-<style is:global>
+<style>
 
     body:has( #hero-squad.active) {
         overflow: hidden;
         height: 100dvh;
-    }
-
-    body  > header {
-        max-width: 2000px;
-        margin-inline: auto;
-        padding-left: 4rem;
-        margin-bottom: 2rem;
     }
 
 
