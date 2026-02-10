@@ -70,7 +70,6 @@ function Search() {
     }
 
 
-
     function handleAddHero(id: string) {
          const matchingHeroIndex = returnedHeroes.findIndex(hero => hero.id === id);
 

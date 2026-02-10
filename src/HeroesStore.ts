@@ -21,11 +21,9 @@ export const $mapHeroData = (data:any) => {
 
 }
 
-
 const JSONHeroes : Hero[] =   $mapHeroData(StartHeroesJSON);
 
 export const $allHeroes = atom(JSONHeroes);
-
 
 export const  $addToAllHeroes = ((hero :any) => {
     const currentHeroes = structuredClone($allHeroes.get());
@@ -52,5 +50,16 @@ export const $toggleHeroDutyStatus = (id:string, currentOnDutyState: boolean) =>
     currentHeroes[matchingHeroIndex].onDuty = !currentOnDutyState;
     $allHeroes.set(currentHeroes);
 }
+
+export const $clearOnDutyHeroes = () => {
+    const  resetHeroes =  structuredClone($allHeroes.get()).map(hero =>  {
+        return {
+            ...hero,
+            onDuty: false,
+        }
+    });
+    $allHeroes.set(resetHeroes);
+
+};
 
 export const $maxHeroesOnDuty = atom(4);

@@ -5,7 +5,7 @@ import type {Mission} from "../../MissionTypes.ts";
 import "./Missions.css";
 
 import { $allMissions } from "../../MissionStores.ts";
-import { $maxHeroesOnDuty } from "../../HeroesStore.ts";
+import { $maxHeroesOnDuty, $clearOnDutyHeroes } from "../../HeroesStore.ts";
 
 function getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -25,6 +25,7 @@ function Missions() {
         setMission(selectedMission);
         setCurrentMissionIndex(nextIndex);
         $maxHeroesOnDuty.set(selectedMission.required_heroes);
+        $clearOnDutyHeroes();
 
 
     }

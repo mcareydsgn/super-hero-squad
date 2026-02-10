@@ -25,7 +25,6 @@
         corner-shape: var( --hero-card-corner-shape);
         border-radius: var(--hero-card-border-radius);
         transition: border var(--hero-transition-timing), box-shadow var(--hero-transition-timing);
-        backdrop-filter: blur(10px);
 
         &:not(.hero-placeholder):hover,
         &:not(.hero-placeholder):focus {
@@ -132,7 +131,6 @@
         --hero-stat-spacing: 0;
         --hero-stat-grid-template: 1fr 1fr;
 
-
         &:not(.hero-placeholder) {
             --hero-card-box-shadow: var(--secondary-color-400) 0 4px 18px 3px;
             --hero-card-border: 1px solid var(--secondary-color-200);
@@ -166,13 +164,14 @@
                 border-radius: 1rem;
                 corner-shape: var(--hero-card-corner-shape);
                 aspect-ratio: 1 / 3;
-                padding: 0 .5rem;
+                padding: .75rem;
                 transform: translateX(calc(-100% + var(--hero-card-spacing) * 1.25)) rotateY(-90deg);
                 transition: transform .3s ease-in-out;
                 z-index: -1;
                 border: var(--hero-card-border);
                 top: -1px;
                 box-shadow: var(--hero-card-box-shadow);
+                box-sizing: border-box;
 
                 & h4 {
                     margin-block:  var(--hero-card-spacing);
@@ -189,7 +188,6 @@
             }
 
         }
-
 
         & summary {
             cursor:pointer;
@@ -214,7 +212,6 @@
             background-image: url("/kirbydot-user.png");
         }
 
-
         & button {
 
             width: 50px;
@@ -230,7 +227,6 @@
     article.mini-hero-card:has(details[open]) {
         z-index: 5;
     }
-
 
     .hero-placeholder {
         aspect-ratio: 1 / 3;
